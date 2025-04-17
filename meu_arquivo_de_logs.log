@@ -1,0 +1,21 @@
+2025-04-17T00:20:44.034363-0300 INFO Chamando função 'soma' com args (3, 8) e kwargs {} log_decorator.py
+2025-04-17T00:20:44.034363-0300 INFO Função 'soma' retornou 11 log_decorator.py
+2025-04-17T00:22:22.019177-0300 ERROR Exceção capturada em 'soma': unsupported operand type(s) for +: 'int' and 'str' log_decorator.py
+Traceback (most recent call last):
+
+  File "c:\Users\Uso Pessoal\desktop\estudos\jornada_dados\Funcoes_Decorators\teste.py", line 8, in <module>
+    print(soma(3,'u'))
+          └ <function soma at 0x000001F0CA2D9BC0>
+
+> File "c:\Users\Uso Pessoal\desktop\estudos\jornada_dados\Funcoes_Decorators\log_decorator.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ (3, 'u')
+             └ <function soma at 0x000001F0CA01A480>
+
+  File "c:\Users\Uso Pessoal\desktop\estudos\jornada_dados\Funcoes_Decorators\teste.py", line 5, in soma
+    return a + b
+           │   └ 'u'
+           └ 3
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
